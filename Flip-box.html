@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flip-box{
+            margin: auto;
+            height: 400px;
+            width: 400px;
+            border: 12px solid darkorange;
+        }
+        .inner-flip-box{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .front-side,
+        .back-side{
+            height: 400px;
+            width: 400px;
+            background-color: darkblue;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+
+        }
+        .flip-box:hover .inner-flip-box{
+            transform: rotateY(180deg);
+        }
+
+        .front-side{
+            background-color:#BBB;
+            color: black;
+        }
+        .back-side{
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="flip-box">
+        <div class="inner-flip-box">
+            <div class="front-side">
+                <h1> Hover on me to show image </h1> 
+
+            </div>
+            <div class="back-side">
+                <img src="assets/images/close-up-image-programer-working-his-desk-office_1098-18707.avif" height="400px" width="400px" alt="" >
+                
+
+            </div>
+
+        </div> 
+
+    </div>
+</body>
+</html>
